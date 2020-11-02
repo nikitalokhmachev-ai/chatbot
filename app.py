@@ -1,13 +1,13 @@
 import os
 import tensorflow as tf
-from model_utils import transformer, predict
+from model_utils import transformer, predict, tokenizer 
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
 # Build tokenizer using tfds for both questions and answers
-with open('tokenizer.pickle', 'rb') as handle:
-    tokenizer = pickle.load(handle)
+'''with open('tokenizer.pickle', 'rb') as handle:
+    tokenizer = pickle.load(handle)'''
 
 # Define start and end token to indicate the start and end of a sentence
 START_TOKEN, END_TOKEN = [tokenizer.vocab_size], [tokenizer.vocab_size + 1]

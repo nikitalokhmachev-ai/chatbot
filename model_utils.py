@@ -3,7 +3,6 @@ import os
 import re
 import numpy as np
 import pickle
-import matplotlib.pyplot as plt
 
 
 # Maximum number of samples to preprocess
