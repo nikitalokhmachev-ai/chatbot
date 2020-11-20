@@ -32,7 +32,7 @@ model = transformer(
     num_heads=NUM_HEADS,
     dropout=DROPOUT)
 
-model.load_weights('cb_model.hdf5')
+model.load_weights('cb_model_2.hdf5')
 
 @app.route('/message', methods=['POST'])
 def process_message():
